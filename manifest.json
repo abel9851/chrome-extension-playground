@@ -1,0 +1,11 @@
+{
+    "name": "chrome extension playground",
+    "description": "chrome extension playground just for fun! just do it!",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_icon": "hello_extensions.png",
+        "default_popup": "hello.html",
+        "default_title": "chrome extension playground"
+    }
+}
