@@ -1,29 +1,32 @@
 {
-  "complilerOptions": {
-    /* ---기본 설정 ---*/
-    "target": "ES2022", // 코드를 어떤 버전의 JS로 변환할지
-    "module": "nodenext", // 모듈 시스템 (Node.js 16+ 환경의 표주)
-    "moduleResolution": "nodenext", // 모듈 해석 방식
-    /* --- JS/TS 상호 운용성 ---*/
-    "esModuleInterop": true, // CommonJs 모듈(require)과 ESM(import)을 원활하게 사용
-    "allowSynTheticDefaultImports": true, // default export가 없는 모듈도 import * as React from 'react'; 대신 import React from 'react'; 처럼 쓰게 해줌
-    /*--- 강력한 타입 검사 (가장중요!) ---*/
-    "strict": true, // 아래 모든 'strict' 관련 옵션을 켠다 (TS의 핵심)
-    // "strictNullCHecks": true, // (strict=true에 포함됨) null, undefined를 엄격하게 처리
-    // "noImplicitAny": true, // (strict=true에 포함됨) 타입이 없는 'any'를 허용 안 함
-    /*--- 편의 기능 ---*/
-    "forceConsistentCasingInFileNames": true, // 파일 이름 대소문자 구분 강제
-    // CURIOUS: .d.ts 파일이 뭐지?
-    // GOTIT: 자바스크립트로만 짜인 코드의 타입 설명서. declare 키워드를 사용
-    "skipLibCheck": true, // node_modules 안의 .d.ts 파일 타입 검사 생략 (컴파일 속도 향상)
-    /*--- 출력 설정 ---*/
-    "outDir": "./dist", // 컴파일된 JS 파일이 저장될 폴더
-    "rootDir": "./src" // TS 소스 코드의 루트 폴더
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": [
+      "vite/client"
+    ],
+    "skipLibCheck": true,
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
   },
   "include": [
     "src"
-  ], // 컴파일할 파일들이 있는 폴더
-  "exclude": [
-    "node_modules"
-  ] // 컴파일에서 제외할 폴더
+  ]
 }
