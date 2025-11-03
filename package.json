@@ -1,5 +1,16 @@
 {
-  "dependencies": {
-    "chrome-types": "^0.1.384"
+  "name": "chrome-extension-playground",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "chrome-types": "^0.1.384",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.7"
   }
 }
