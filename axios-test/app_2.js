@@ -118,13 +118,14 @@ axios.interceptors.response.use(
         
         // error안에 config와 Response가 있구나.
         const { config, response } = error;
-        console.log(`error의 내용물을 확인중: ${error}`);
-        console.log(`error 매개변수의 객체인지 확인한다. : ${typeof error === 'object'}`);
-        console.log(`error객체는 object이다. ${typeof error}`)
-        console.log(`error 매개변수가 TypeError객체인지 확인한다. : ${error instanceof TypeError}`)
-        console.dir(`console.dir로 error의 내용물을 확인중: ${error}`);
-        console.log(`error.response의 내용물을 확인중: ${response}`);
-        console.log(`config의 내용물을 확인중: ${config}`);
+        // console.log(`error의 내용물을 확인중: ${error}`);
+        // console.log(`error 매개변수의 객체인지 확인한다. : ${typeof error === 'object'}`);
+        // console.log(`error객체는 object이다. ${typeof error}`)
+        // console.log(`error 매개변수가 TypeError객체인지 확인한다. : ${error instanceof TypeError}`)
+        // console.dir(error);
+        // console.log(`error의 stack을 확인해보자: ${error.stack}`)
+        // console.log(`error.response의 내용물을 확인중: ${response}`);
+        // console.log(`config의 내용물을 확인중: ${config}`);
         const originalRequest = config;
 
         // 재시도 횟수 카운트

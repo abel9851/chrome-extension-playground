@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Axios 인터셉터 샌드박스</title>
+    <style>
+        body { font-family: san-serif; padding: 20px; }
+        #testButton { font-size: 1.2em; padding: 10px; }
+        #log {
+            margin-top: 20px; border: 1px solid #ccc;
+            padding: 10px; height: 400px; overflow-y: scroll;
+            background: #f9f9f9; font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Axios 401 재시도 샌드박스</h1>
+    <p>버튼을 누르면 API 요청 2개가 동시에 발사됩니다. (F12 개발자 도구 콘솔도 함께 보세요)</p>
+    <button id="testButton">동시 요청 테스트!</button>
+    <h3>실행로그:</h3>
+    <div id="log"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app_2.js"></script>
+</body>
+</html>
