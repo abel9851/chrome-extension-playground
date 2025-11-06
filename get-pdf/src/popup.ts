@@ -47,9 +47,7 @@ async function sendMessage() {
 
         const response = await chrome.tabs.sendMessage(
             currentTab.id,
-            {
-                action: "GET_PDFS"
-            }
+            "GET_PDFS"
         ); 
         console.log("Received response: ", response.farewell);
     } catch (error) {
