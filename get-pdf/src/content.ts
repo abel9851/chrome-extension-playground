@@ -14,6 +14,12 @@ async function getPDF(message: any, sender: chrome.runtime.MessageSender, sendRe
 
             if (downloadUrl) {
                 const res = await fetch(downloadUrl);
+                if (!res.ok) {
+                    throw new Error(`Response status: ${res.status}`);
+                }
+
+                const result = await res.blob(); // https://developer.mozilla.org/en-US/docs/Web/API/Response/blob
+
             }
 
         }
